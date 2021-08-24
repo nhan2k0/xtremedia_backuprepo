@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+	<title>.: {WEB_TITLE} - Tặng nhạc :.</title>
+	<meta http-equiv="imagetoolbar" content="no">
+	<link rel=stylesheet href='{TPL_LINK}/style.css' type=text/css>
+</head>
+<script>var loadingText = "<center><img src='{TPL_LINK}/img/loading.gif'> <b>Đang tải dữ liệu ...</b></center>";</script>
+<script src="js/gift.js"></script>
+<body>
+<form method="post" onSubmit="return false;">
+<div style="width:100%" align=center><table width=100% border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class=head_l ></td>
+		<td align=center class=head_c >.:: Quà Tặng Âm Nhạc  ::. </td>
+		<td class=head_r > </td>
+	</tr>
+</table>
+<table width=100% cellpadding=2 cellspacing=2 class=border bgcolor="white">
+	<tr><td class=head_div width=100% align=center colspan=2> </td></tr>
+	<tr><td colspan=2 class=fr><div id='gift_loading' style='display:none;margin-bottom:5'></div></td></tr>
+	<tr>
+		<td width=30% class=fr>Tên của bạn :</td>
+		<td class=fr_2><input type="text" id="sender_name" size="40"></td>
+	</tr>
+	<tr>
+		<td class=fr>Email của bạn :</td>
+		<td class=fr_2><input type="text" id="sender_email" size="40"></td>
+	</tr>
+	<tr>
+		<td class=fr>Tên người nhận :</td>
+		<td class=fr_2><input type="text" id="recip_name" size="40"></td>
+	</tr>
+	<tr>
+		<td class=fr>Email người nhận :</td>
+		<td class=fr_2><input type="text" id="recip_email" size="40"></td>
+	</tr>
+	<tr>
+		<td class=fr>Lời nhắn :<br>Tối đa <b>255</b> ký tự</td>
+		<td class=fr_2><textarea style="width:320px" rows="5" id="message"></textarea></td>
+	</tr>
+	<tr><td colspan=2 class=fr align=center><input class="submit" type="submit" value="Gởi đi" onClick="return gift_check_values();"> <input class="submit" type="reset" value="Nhập lại"> <input type="hidden" id="media_id" value="{song.ID}"></td></tr>
+</table>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<table width=100% border="0" cellpadding="0" cellspacing="0">	<tr>		<td class=head_l ></td>		<td align=center class=head_c >.:: Sửa thông tin thành viên ::. </td>		<td class=head_r > </td>	</tr></table><form method="post" onSubmit="return false;">
+<table width=100% cellpadding=2 cellspacing=2 class=border>
+	<tr><td class=head_div width=100% colspan=3></td></tr>
+	<tr><td colspan=3><div id='change_info_loading' style='display:none;margin-bottom:5'></div></td></tr>
+	<tr><td class=fr width="40%"><b>Email</b></td><td class=fr_2><input size="30" id="u_email" value="{user.EMAIL}"></td><td class=fr align=center><input title="Dấu thông tin" type="checkbox" class="checkbox" id='hide_email' {user.HIDE_EMAIL}></td></tr>
+	<tr><td class=fr><b>Giới tính</b></td><td class=fr_2><b>{user.SEX}</b></td><td class=fr align=center><input title="Dấu thông tin" type="checkbox" class="checkbox" id='hide_sex' {user.HIDE_SEX}></td></tr>
+	<tr><td class=fr><b>Mật khẩu</b><br>Để trống nếu không muốn đổi mật khẩu</td><td class=fr_2><input type="password" size="30" id="u_oldpwd" value=""></td></tr>
+	<tr><td class=fr><b>Mật khẩu mới</b></td><td class=fr_2><input type="password" size="30" id="u_newpwd_1" value=""></td></tr>
+	<tr><td class=fr><b>Xác nhận mật khẩu mới</b></td><td class=fr_2><input type="password" size="30" id="u_newpwd_2" value=""></td></tr>
+	<tr><td align="center" colspan="2" class="fr"><input type="submit" value="Sửa thông tin" class="button_2" onClick="return change_info();"></td></tr>
+</table>
+</form>

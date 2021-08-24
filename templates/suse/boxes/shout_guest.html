@@ -1,0 +1,37 @@
+<script type="text/javascript" language="JavaScript">
+<!--
+	function loeschen (box) {
+		if (box.defaultValue==box.value) {
+		box.value='';
+		};
+	}
+	
+	var smiletagURL = "./";
+
+//-->
+</script>
+<script type="text/javascript" language="JavaScript" src="shoutbox/smiletag-script.js"></script>
+<table width=100% border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class=head_l ></td>
+		<td align=center class=head_c >.:: ShoutBox ::. </td>
+		<td class=head_r > </td>
+	</tr>
+</table>
+
+<table cellpadding=2 cellspacing=2 width=100% class=border>
+	<tr>
+		<td class=head_div align=center >
+			Bạn cần phải đăng nhập để sử dụng ShoutBox
+		</td>
+	</tr>
+	<tr>
+		<td align=right style="padding-bottom:2px;" >
+			<a href="#" title="Kiểm tra tin nhắn tại Shoutbox" onclick="reload_shoutbox();return false"> <img width=18 height=18 src="shoutbox/images/refresh.gif">&nbsp;</a><br>
+			<iframe name="iframetag" onload="doLoad()" style="border: #c6d6e6 1px solid;" scrolling="auto" marginwidth="0" marginheight="0" src="shoutbox/view.php" width="100%" height="300" >
+				Your Browser must support IFRAME to view
+				this page correctly
+			</iframe>
+		</td>
+	</tr>
+</table>

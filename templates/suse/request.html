@@ -1,0 +1,56 @@
+<style>
+.form {
+	border: #c6d6e6 1px solid; 
+	padding-right: 1px; 
+	padding-left: 1px; 
+	padding-top: 2px;
+	margin: 0px;
+	margin-top: 1px;
+	background: #ffffff; 
+	font: 12px Arial, Helvetica, sans-serif; 
+	width: 100%; 
+	color: #666666; 
+}
+</style>
+<table width=100% border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class=head_l ></td>
+		<td align=center class=head_c >.:: Yêu cầu nhạc  ::. </td>
+		<td class=head_r > </td>
+	</tr>
+</table>
+<form onSubmit="return false;" method="post">
+<table width=100% align=center cellpadding=0 cellspacing=0 class=border>
+	<tr><td width=100% class=head_div colspan=2 height=22 ></td></tr>
+	<tr><td colspan=2><div id='reg_loading' style='display:none;margin-bottom:5'></div></td>
+	<tr>
+		<td width=25% class=fr><b>Tên bài nhạc <span style="color:red">*</span></b></td>
+		<td width=75% class=fr_2><input type="text" id="title_request" maxlength="200" class="form" style="width:100%"></td>
+	</tr>
+	<tr>
+		<td class=fr><b>Nhạc sĩ</b></td>
+		<td class=fr_2><input type="text" id="author_request" maxlength="200" class="form" style="width:100%"></td>
+	</tr>
+	<tr>
+		<td class=fr><b>Ca sĩ</b></td>
+		<td class=fr_2><input type="text" id="singer_request" maxlength="200" class="form" style="width:100%"></td>
+	</tr>
+	<tr>
+		<td class=fr><b>Your YM:</b></td>
+		<td class=fr_2><input type=text id="ym_request" maxlength=200 class="form" style="width:100%"></td>
+	</tr>
+	<tr>
+		<td class=fr><b>Your E-mail <span style="color:red">*</span></b></td>
+		<td class=fr_2><input type="text" id="email_request" maxlength="80" class="form" style="width:100%"></td>
+	</tr>
+	<tr>
+		<td class=fr><b>More Info</b></td>
+		<td class=fr_2>
+			<textarea class="form" id="info_request" rows="5" style="width:100%">Một vài thông tin thêm về bản nhạc này</textarea><br />
+		</td>
+	</tr>
+	<tr><td colspan=2 align="center" class="fr_2" style="padding:5">
+			<input type="submit" value="Gửi Yêu Cầu" class="button_1" onClick="return request_check_values();"> <input type="reset" value="Nhập lại" class="button_1">
+	</td></tr>
+</table>
+</form>

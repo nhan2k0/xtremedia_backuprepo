@@ -1,0 +1,285 @@
+<html>
+<head>
+	<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+	<title>.: {WEB_TITLE} :.</title>
+	<meta name="description" content="Xem, nghe và Download nhạc, phim, truyền hình trực tuyến miễn phí không cần đăng ký" />
+	<meta name="keywords" content="HVACR MEDIA : Music, Media, Nhạc, Nhac, Xem phim, Truyền hình, Truyen hinh, nghe nhac, phim, diện ảnh" />
+
+	<meta http-equiv="imagetoolbar" content="no">
+	<link rel=alternate type="application/rss+xml" title="{WEB_TITLE}" href="rss.php">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel=stylesheet href='{TPL_LINK}/style.css' type=text/css>
+</head>
+<script>
+
+function SoH_Media(obj,is_close) {
+	var hideshow = document.getElementById(obj);
+	if (is_close) {
+		//hideshow.innerHTML = '';
+		//hideshow.style.display = "none";
+		document.getElementById('playing_field').innerHTML = '';
+		//document.getElementById("show_hide").style.display = "none";
+	}
+	else {
+		if(hideshow.style.display != "none") {
+			hideshow.style.display = "none";
+			document.getElementById("SoH").innerHTML = '[+] Hiện mục nghe nhạc';
+		}
+		else {
+			hideshow.style.display = "block";
+			document.getElementById("SoH").innerHTML = '[-] Dấu mục nghe nhạc';
+		}
+	}
+	return false;
+}
+
+function scrool_auto() {
+var vitri_top = document.getElementById("data_field").offsetTop + 200;
+//alert(vitri_top);
+self.scrollTo(0, vitri_top);
+}
+
+var loadingText = "<center><img src='{TPL_LINK}/img/loading.gif'> <b>Đang tải dữ liệu ...</b></center>";
+
+// BEGIN RATING
+
+var RATE_OBJECT_IMG = '{TPL_LINK}/img/rate/full.gif';
+var RATE_OBJECT_IMG_HOVER = '{TPL_LINK}/img/rate/full.gif';
+var RATE_OBJECT_IMG_HALF = '{TPL_LINK}/img/rate/half.gif';
+var RATE_OBJECT_IMG_BG = '{TPL_LINK}/img/rate/none.gif';
+
+// END RATING
+
+// BEGIN THONGBAO
+function hideThongBao(){
+	document.getElementById('thongbao').style.display = 'none';
+	document.cookie='thongbao_readed=1'
+}
+function showThongBao(){
+	if(document.getElementById('thongbao')) {
+		document.getElementById('thongbao').style.display = 'block';
+	}
+	else alert('Hiện tại chưa có thông báo nào từ phía BQT');
+}
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+var thongbao_readed = readCookie('thongbao_readed');
+// END THONGBAO
+</script>
+
+<div id="LoadingDiv" style="position:absolute; visibility:show; z-index:1000; filter: alpha(opacity=80); left:-500px; top:300px;">
+	<table width="200" cellpadding="20" cellspacing="1" border="0" bgcolor="#666666">
+		<tr>
+			<td align=center bgcolor="#FFFFFF"><img src="{TPL_LINK}/img/wait.gif" width="32" height="32" border="0" /><br />
+			Đang Tải Dữ Liệu....</td>
+		</tr>
+	</table>
+</div>
+<!-- BEGIN js --><!-- END js -->
+<body>
+
+<div id="Update_Thongbao" style="position:absolute; display:none; z-index:1000; left:300px; top:200px;">
+	<table width="400" cellpadding="20" cellspacing="1" border="0" bgcolor="#666666">
+		<tr>
+			<td align=center bgcolor="#FFFFFF">
+				Website vừa mới Cập Nhật.
+				<p>Để vào Website, bạn hãy <span style="color:red;font-weight:bold">nhấn nút F5</span> trên bàn phím.
+				<p> Thành thật xin lỗi bạn vì sự phiền phức này.
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+
+<div id=MainPage align=center style="width:100%">
+
+<!-- BEGIN CHECK UPDATE -->
+<script>
+if ( update !== '001' ) {
+	document.getElementById('Update_Thongbao').style.display = 'block';
+	document.getElementById('MainPage').style.display = 'none';
+	window.stop();
+}
+</script>
+<!-- END CHECK UPDATE -->
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="background-image: url({TPL_LINK}/img/bg_left.gif); background-repeat: repeat-y;"><img src="{TPL_LINK}/img/bg_left.gif"></td>
+<td id=main_body>
+
+<script>
+
+var widthscreen = screen.width;
+if ( widthscreen == 800 ) { document.getElementById("main_body").style.width = '770px'; }
+else if ( widthscreen == 1024 ) { document.getElementById("main_body").style.width = '840px'; }
+else {document.getElementById("main_body").style.width = '100%';}
+
+</script>
+
+<div style='width:100%'>
+	<table width=100% cellpadding=0 cellspacing=0 class=topborder>
+		<tr><td style="height:31px;width:100%;background-image: url({TPL_LINK}/img/top1.gif); background-repeat: repeat-x;" align="center"></td></tr>
+		<tr>
+			<td align="center" style="background-image: url({TPL_LINK}/img/cknl_media.gif);background-position: center; height: 140px; width: 766px; background-repeat: no-repeat;">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" 
+		width="100%" height="100%">
+					<param name="movie" value="{TPL_LINK}/img/white.swf">
+					<param name="quality" value="high">
+					<param name="menu" value="false">
+					<param name="WMode" value="Transparent">
+		        	<embed src="{TPL_LINK}/img/white.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" 
+		width="100%" height="100%" WMode="Transparent"></embed>
+				</object>
+			</td>
+		</tr>
+		<tr class=head_div ><td style='padding-top: 10;'>
+				<div style="padding:4">
+				<form id=search onSubmit="return do_search();">
+				Tìm kiếm <input type=text id=keyword value="Gõ không dấu" onFocus="this.value=''" size=30>
+				<select id="searchType">
+					<option value="all" selected><b>All Media</b></option>
+					<option value="song">&nbsp; » Nhạc</option>
+					<option value="ebook">&nbsp; » Ebook</option>
+					<option value="file">&nbsp; » File</option>
+					<option>-----------</option>
+					<option value="singer">Ca sỹ</option>
+					<option value="album">Album</option>
+					<option value="news">Tin tức</option>
+				</select>
+				<input type=submit class=button value="Tìm">
+				</form>
+				</div>
+				<div style="padding:5">
+				Tìm theo bài hát : 
+				<a href="#Quick_Search,1,A"><b>A</b></a> <a href="#Quick_Search,1,B"><b>B</b></a> 
+				<a href="#Quick_Search,1,C"><b>C</b></a> <a href="#Quick_Search,1,D"><b>D</b></a> 
+				<a href="#Quick_Search,1,Đ"><b>Đ</b></a> <a href="#Quick_Search,1,E"><b>E</b></a> 
+				<a href="#Quick_Search,1,F"><b>F</b></a> <a href="#Quick_Search,1,G"><b>G</b></a> 
+				<a href="#Quick_Search,1,H"><b>H</b></a> <a href="#Quick_Search,1,I"><b>I</b></a> 
+				<a href="#Quick_Search,1,J"><b>J</b></a> <a href="#Quick_Search,1,K"><b>K</b></a> 
+				<a href="#Quick_Search,1,L"><b>L</b></a> <a href="#Quick_Search,1,M"><b>M</b></a> 
+				<a href="#Quick_Search,1,N"><b>N</b></a> <a href="#Quick_Search,1,O"><b>O</b></a> 
+				<a href="#Quick_Search,1,P"><b>P</b></a> <a href="#Quick_Search,1,Q"><b>Q</b></a> 
+				<a href="#Quick_Search,1,R"><b>R</b></a> <a href="#Quick_Search,1,S"><b>S</b></a> 
+				<a href="#Quick_Search,1,T"><b>T</b></a> <a href="#Quick_Search,1,U"><b>U</b></a> 
+				<a href="#Quick_Search,1,Ư"><b>Ư</b></a> <a href="#Quick_Search,1,V"><b>V</b></a> 
+				<a href="#Quick_Search,1,W"><b>W</b></a> <a href="#Quick_Search,1,X"><b>X</b></a> 
+				<a href="#Quick_Search,1,Y"><b>Y</b></a> <a href="#Quick_Search,1,Z"><b>Z</b></a> 
+				<a href="#Quick_Search,1,0-9"><b>0 - 9</b></a>
+				</div>
+				<div style="width: 100%; height: 13px; background-image: url({TPL_LINK}/img/top2.gif); background-repeat: repeat-x;" align="center"></div>
+		</td></tr>
+		<tr>
+			<td valign=top style="padding-top:5;">
+				<table cellpadding=2 cellspacing=0 width=100% align=center>
+					<tr><td colspan=3><!-- BOX box_main_menu() --></td></tr>
+					<tr>
+					<td id="left_box" valign=top align=center style="width:18%;display:" >
+						<!-- BEGIN LEFT BOX -->
+						<table cellpadding=1 cellspacing=0 style="width:100%" align=center>
+							<tr><td><!-- BOX box_news_category_menu() --></td></tr>
+							<tr><td style="padding-top:10"><!-- BOX box_user_menu() --></td></tr>
+							<tr><td style="padding-top:10"><!-- BOX box_gift() --></td></tr>
+							<tr><td style="padding-top:10"><!-- BOX box_category_menu() --></td></tr>
+							<tr><td style="padding-top:10"><!-- BOX box_album('New') --></td></tr>
+							<tr><td style='padding-top:10'><!-- BOX box_misc() --></td></tr>
+							<tr><td style='padding-top:10'><!-- BOX box_tpl_list() --></td></tr>
+						</table>
+						<!-- END LEFT BOX -->
+					</td>
+					<td id="center_box" valign=top style="width:64%" align=center>
+						<!-- BEGIN CENTER BOX -->
+						<table width="100%" cellpadding=2 cellspacing=0 style="margin-bottom:5">
+						<tr>
+							<td colspan=2>
+								<table width=100% border="0" cellpadding="0" cellspacing="0">
+									<tr width=100%>
+										<td class=headblack1_l width=15 ></td>
+										<td align=center class=headblack1_c style="color:#FFF;" >.:: TOP trong tháng ::. </td>
+										<td class=headblack1_r width=15 > </td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td width=50% valign=top><!-- BOX box_top_media('Media_Play_Month') --></td>
+							<td valign=top><!-- BOX box_top_media('Media_Download_Month') --></td>
+						</tr>
+						<tr>
+							<td width=50% valign=top><!-- BOX box_top_media('File_Play_Month') --></td>
+							<td valign=top><!-- BOX box_top_media('File_Download_Month') --></td>
+						</tr>
+						</table>
+						<!-- BOX box_announcement() -->
+						<div id='playing_field' style='dislay:none;width:100%;'></div>
+						<div class=fr id='show_hide' style='display:none;margin-bottom:5' align=center><span><a href="#" id='SoH' onClick="return SoH_Media('playing_field',0);">[-] Dấu mục nghe nhạc</a></span> || <span><a href=# onClick="return SoH_Media('playing_field',1);">[x] Tắt mục nghe nhạc</a></span></div>
+						<div id='loading' style='display:none;margin-bottom:5'></div>
+						
+						<div id='data_field' style='dislay:none;width:100%'></div>
+						<script>startLoad();</script>
+						<!-- END CENTER BOX -->
+					</td>
+					<td id="right_box" valign=top align=center style="width:18%;display:" >
+						<!-- BEGIN RIGHT BOX -->
+						<table style="width:100%" cellpadding=0 cellspacing=0 align=center>
+							<tr><td><!-- BOX box_playlist() --></td></tr>
+							<tr><td style='padding-top:10'><!-- BOX box_newest_commnet() --></td></tr>
+							<tr><td style="padding-top:10"><!-- BOX box_shout() --></td></tr>
+							<tr><td style="padding-top:10"><!-- BOX box_singer_list(1) --></td></tr>
+							<tr><td style="padding-top:10"><!-- BOX box_singer_list(2) --></td></tr>
+							<tr><td style='padding-top:10'><!-- BOX box_ads() --></td></tr>
+						</table>
+						<!-- END RIGHT BOX -->
+					</td>
+				</table>
+			</td>
+		</tr>
+		<tr><td width="98%"><!-- BOX box_user_online() --></td></tr>
+		<tr><td style='padding-top:2'><!-- BOX box_stats() --></td></tr>
+		<tr>
+			<td width="100%">
+				<table style="background-image: url({TPL_LINK}/img/bg_bottom.gif); background-repeat: repeat-x;" class=footer width="100%" cellpadding=4 cellspacing=0>
+					<tr>
+						<td style="padding-top:24px;" align="center">
+							<b>.: {WEB_TITLE} :.</b>
+							<br />Powered by <a href=ymsgr:sendIM?xtremedia.source><b>XtreMedia 1.2</b></a> -  <a href=ymsgr:sendIM?redphoenix89><b>RedPhoenix89</b></a>
+							<!-- Design by Suse ( Zene - CKNL.NET ) -->
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</td>
+<td style="background-image: url({TPL_LINK}/img/bg_right.gif); background-repeat: repeat-y;"><img src="{TPL_LINK}/img/bg_right.gif"></td>
+</tr>
+</table>
+
+<!-- Bắt đầu Quảng cáo chạy 2 bên -->
+<SCRIPT src="js/floatadv.js" type=text/javascript></SCRIPT>
+<SCRIPT type=text/javascript>
+/*
+var widthscreen = screen.width;
+if (widthscreen == 1024) {
+	theFloaters.addItem('coupleBannerAdv',0,0,'<div style="position: absolute; left: 2px; top: 10px;"><a target=_blank href=\"http://www.cknl.net\"><img width=100 height=200 src=\"img/reader.jpg\" alt=\"AD\" border=\"1\"></a><br><a title="CKNL.NET" target=_blank href=\"http://www.cknl.net\"><img width=100 height=150 src=\"img/prc_reader.jpg\"></a><br><a title="CKNL.NET" target=_blank href=\"http://www.cknl.net\"><img width=100 height=90 src=\"img/lit_reader.jpg\"></a></div>');
+	theFloaters.play();
+	}
+*/
+</SCRIPT>
+<!-- Kết thúc Quảng cáo chạy 2 bên -->
+
+</div>
+
+</body>
+</html>

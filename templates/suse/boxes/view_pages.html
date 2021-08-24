@@ -1,0 +1,20 @@
+<table width=100% valign=bottom cellpadding=2 cellspacing=2>
+	<tr><td align=center>
+	<!-- BEGIN page_block -->
+		<!-- #BEGIN first_previous_page -->
+		<a class=pagelink href={page.F_LINK} onfocus=this.blur() title ='Xem trang đầu'><b>&laquo;&laquo;</b></a> 
+		<a class=pagelink href={page.P_LINK} onfocus=this.blur() title='Xem trang trước'><b>&laquo;</b></a> 
+		<!-- #END first_previous_page -->
+		<!-- #BEGIN current_page -->
+		<a onfocus=this.blur() class=pagecurrent>{page.NUMBER}</a> 
+		<!-- #END current_page -->
+		<!-- #BEGIN page_number -->
+		<a onfocus=this.blur() href={page.LINK} title='Xem trang {page.NUMBER}' class=pagelink>{page.NUMBER}</a> 
+		<!-- #END page_number -->
+		<!-- #BEGIN last_next_page -->
+		<a class=pagelink href={page.N_LINK} onfocus=this.blur() title='Xem trang kế tiếp'><b>&raquo;</b></a> 
+		<a class=pagelink href={page.L_LINK} onfocus=this.blur() title='Xem trang cuối'><b>&raquo;&raquo;</b></a> 
+		<!-- #END next_page -->
+	<!-- END page_block -->
+	</td></tr>
+</table>

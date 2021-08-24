@@ -1,32 +1,0 @@
-<table width=100% border="0" cellpadding="0" cellspacing="0">	<tr>		<td class=head_l ></td>		<td align=center class=head_c >.:: {singer.NAME} ::. </td>		<td class=head_r > </td>	</tr></table><table width=100% class=border cellpadding=0 cellspacing=0>	<tr>		<td class=head_div valign=top align=left style="padding:5px" >			<table align=left cellpadding=10 border=0>				<tr><td width="100px"><img src="{singer.IMG}"></td></tr>			</table>			<span style="color:#000; font-weight: bold; font-size: 12px;" ><b>Thông tin ca sỹ</b></span>			<p>{singer.INFO}		</td>	</tr>	<tr><td align=right style="padding:10px" > <b><a class=border style="padding:5px;" href="{singer.PLAY_URL}"> &nbsp;»»&nbsp; Nghe toàn bộ nhạc phẩm</a></b> </td></tr></table><br><!-- BEGIN album_block --><table width=100% border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class=head_l ></td>
-		<td align=center class=head_c >.:: Album ::. </td>
-		<td class=head_r > </td>
-	</tr>
-</table>
-<table width=100% cellpadding=0 cellspacing=0><tr>	<td class=head_div valign=top>			<table width=100% cellpadding=0 cellspacing=0>			<tr><td>				<table cellpadding=2 cellspacing=2 width=100% class=border>					<tr align=center class=m_bar_info><td colspan=2></td><td width=30px><img src='{TPL_LINK}/img/media/play.gif'></td></tr>
-			<!-- BEGIN album_list --> 
-			<!-- #BEGIN album_list_row -->
-					<tr class={album.CLASS} align=center>						<td width=50><img src="{album.IMG}" width="100" height="100"></td><td align=left><a href={album.URL}><b>{album.NAME}</b></a></td><td><b>{album.VIEWED}</b></td>					</tr>
-			<!-- #END album_list_row -->
-			<!-- END album_list -->
-					<tr class={CLASS} align=center><td colspan=6>Có tất cả <b>{TOTAL}</b> album</b></td></tr>
-				</table>			</td></tr>		</table>	</td></tr></table><br>
-<!-- END album_block -->
-<!-- BEGIN song_block --><table width=100% border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td class=head_l ></td>
-		<td align=center class=head_c >.:: Ca khúc ::. </td>
-		<td class=head_r > </td>
-	</tr>
-</table>
-
-<table width=100% cellpadding=0 cellspacing=0>	<tr>		<td class=head_div valign=top>			<table width=100% cellpadding=0 cellspacing=0>				<tr>					<td>						<table cellpadding=2 cellspacing=2 width=100% class=border>							<tr align=center class=m_bar_info>								<td colspan=2></td>								<td width=30px><img src='{TPL_LINK}/img/media/play.gif'></td>								<td width=30px><img src='{TPL_LINK}/img/media/download.gif'></td>								<td width=30px><img src='{TPL_LINK}/img/media/lyric.gif'></td>								<td width=30px><img src='{TPL_LINK}/img/media/playlist.gif'></td>							</tr>
-							<!-- BEGIN song_list --> 
-							<!-- #BEGIN song_list_row -->
-							<tr class={song.CLASS} align=center>								<td width=16>{song.TYPE}</td>								<td align=left><a href="{song.URL}"><b>{song.TITLE}</b></a></td>								<td><b>{song.VIEWED}</b></td>								<td><b>{song.DOWNLOADED}</b></td>								<td>{song.LYRIC}</td>								<td><a href=# onclick='addToPlaylist({song.ID});return false;'><img src='{TPL_LINK}/img/media/add.gif'></a></td>							</tr>
-							<!-- #END song_list_row -->
-							<!-- END song_list -->
-							<tr class={CLASS} align=center>								<td style="padding:5px;" colspan=6>Có tất cả <b>{TOTAL}</b> ca khúc</b></td>							</tr>						</table>					</td>				</tr>				<tr><td style="padding:5px;">{VIEW_PAGES}</td></tr>			</table>		</td>	</tr></table>
-<!-- END song_block -->

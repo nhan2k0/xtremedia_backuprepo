@@ -1,0 +1,22 @@
+<form method="post" onSubmit="return false;">
+<input value="{media.ID}" type="hidden" id="media_id">
+<table width=100% cellpadding=2 cellspacing=2 class=border>
+	<tr><td class=title_r align=center>:: Cảm nhận ::</td></tr>
+	<tr><td><div style="overflow:auto;height:150px;width:100%">
+	<!-- BEGIN comment_block -->
+	<!-- #BEGIN comment -->
+	Gởi bởi <b><a href="{comment.POSTER_URL}">{comment.POSTER}</a></b> vào ngày {comment.TIME}
+	<!-- #BEGIN functions --> - <a href='#Delelte' onClick="return comment_delete({media.ID},{comment.ID})"><b>Xóa</b></a><!-- #END functions -->
+	<div class="{comment.CLASS}">{comment.CONTENT}</div>
+	<!-- #END comment -->
+	<!-- END comment_block -->
+	</div></td></tr>
+	<!-- BEGIN write_comment -->
+	<tr><td><div id='comment_loading' style='display:none;margin-bottom:5'></div></td></tr>
+	<tr>
+		<td class=fr align=center>Cảm nhận của bạn - Tối đa <b>255</b> ký tự<br>Hỗ trợ <b>Emotions</b> của <b>Yahoo! Messenger</b><br><textarea style="width:400px" rows="5" id="comment_content"></textarea></td>
+	</tr>
+	<tr><td class=fr align=center><input class="submit" type="submit" value="Gởi đi" onClick="return comment_check_values();"></td></tr>
+	<!-- END write_comment -->
+</table>
+</form>

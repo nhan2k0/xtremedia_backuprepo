@@ -1,0 +1,13 @@
+<table width=100% cellpadding=2 cellspacing=2 class=border>
+	<tr><td class=title_l align=center>:: Thể loại nhạc ::</td></tr>
+	<tr><td>
+	<!-- BEGIN cat_list -->
+	<!-- #BEGIN cat_list.parent -->
+	<div style="background-color:#F9F9F9"><img src='{TPL_LINK}/img/media/bullet_big.gif'> <a href={cat_parent.URL}><b>{cat_parent.NAME}</b></a></div>
+	<!-- #END cat_list.parent -->
+	<!-- #BEGIN cat_list.sub -->
+	&nbsp; <img src='{TPL_LINK}/img/media/bullet_tiny.gif'> <a href={cat_sub.URL}> {cat_sub.NAME}</a><br>
+	<!-- #END cat_list.sub -->
+	<!-- END cat_list -->
+	</td></tr>
+</table>

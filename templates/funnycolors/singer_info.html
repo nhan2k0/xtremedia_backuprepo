@@ -1,0 +1,45 @@
+<table width=100% cellpadding=0 cellspacing=0>
+	<tr>
+		<td valign=top align=center>
+			<table width=100% cellpadding=2 cellspacing=2 class=border>
+				<tr><td class=title_c colspan=3>{singer.NAME}</td></tr>
+				<tr><td rowspan=3 width="100px" align=center class=fr><img src="{singer.IMG}" width=100 height=100></td></tr>
+				<tr><td class=fr valign=top><b>Thông tin ca sỹ</b><br>{singer.INFO}</td></tr>
+				<tr><td class=fr><b><a href="{singer.PLAY_URL}">Nghe toàn bộ nhạc phẩm</a></b></td></tr>
+			</table>
+		</td>
+	</tr>
+</table><br>
+<!-- BEGIN album_block -->
+<table width=100% cellpadding=0 cellspacing=0><tr>
+	<td valign=top><table width=100% cellpadding=0 cellspacing=0>
+	<tr><td><table cellpadding=2 cellspacing=2 width=100% class=border>
+		<tr><td colspan=3 align=center class=title_c><b>Album</b></td></tr>
+		<tr align=center class=m_bar_info><td colspan=2></td><td width=30px><img src='{TPL_LINK}/img/media/play.gif'></td></tr>
+		<!-- BEGIN album_list --> 
+		<!-- #BEGIN album_list_row -->
+		<tr class={album.CLASS} align=center><td width=50><img src="{album.IMG}" width="100" height="100"></td><td align=left><a href={album.URL}><b>{album.NAME}</b></a></td><td><b>{album.VIEWED}</b></td></tr>
+		<!-- #END album_list_row -->
+		<!-- END album_list -->
+		<tr class={CLASS} align=center><td colspan=6>Có tất cả <b>{TOTAL}</b> album</b></td></tr>
+	</table></td></tr>
+	</table></td>
+</tr></table><br>
+<!-- END album_block -->
+<!-- BEGIN song_block -->
+<table width=100% cellpadding=0 cellspacing=0><tr>
+	<td valign=top><table width=100% cellpadding=0 cellspacing=0>
+	<tr><td><table cellpadding=2 cellspacing=2 width=100% class=border>
+		<tr><td colspan=6 align=center class=title_c><b>Ca khúc</b></td></tr>
+		<tr align=center class=m_bar_info><td colspan=2></td><td width=30px><img src='{TPL_LINK}/img/media/play.gif'></td><td width=30px><img src='{TPL_LINK}/img/media/download.gif'></td><td width=30px><img src='{TPL_LINK}/img/media/lyric.gif'></td><td width=30px><img src='{TPL_LINK}/img/media/playlist.gif'></td></tr>
+		<!-- BEGIN song_list --> 
+		<!-- #BEGIN song_list_row -->
+		<tr class={song.CLASS} align=center><td width=16>{song.TYPE}</td><td align=left><a href="{song.URL}"><b>{song.TITLE}</b></a></td><td><b>{song.VIEWED}</b></td><td><b>{song.DOWNLOADED}</b></td><td>{song.LYRIC}</td><td><a href=# onclick='addToPlaylist({song.ID});return false;'><img src='{TPL_LINK}/img/media/add.gif'></a></td></tr>
+		<!-- #END song_list_row -->
+		<!-- END song_list -->
+		<tr class={CLASS} align=center><td colspan=6>Có tất cả <b>{TOTAL}</b> ca khúc</b></td></tr>
+	</table></td></tr>
+	<tr><td>{VIEW_PAGES}</td></tr>
+	</table></td>
+</tr></table>
+<!-- END song_block -->

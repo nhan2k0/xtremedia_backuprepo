@@ -1,0 +1,18 @@
+<table width=100% cellpadding=2 cellspacing=2>
+<tr><td width=50%>
+<IMG src="{TPL_LINK}/img/tim.gif"> Bài hát: <b>{song.TITLE}</b><br>
+<IMG src="{TPL_LINK}/img/tim.gif"> Ca sĩ: <a href="{singer.URL}"><b>{singer.NAME}</b></a><br>
+<IMG src="{TPL_LINK}/img/tim.gif"> Album: <a href="{album.URL}"><b>{album.NAME}</b></a><br>
+<IMG src="{TPL_LINK}/img/tim.gif"> Thể loại: <a href="{cat.URL}"><b>{cat.NAME}</b></a><br>
+</td>
+<td>
+<IMG src="{TPL_LINK}/img/tim.gif"> Người gửi: <a href="{user.URL}"><b>{song.POSTER}</b></a><br>
+<IMG src="{TPL_LINK}/img/tim.gif"> Số lần nghe: {song.VIEWED}<br>
+<IMG src="{TPL_LINK}/img/tim.gif"> Số lần tải: {song.DOWNLOADED}<br><br></tr>
+<tr><td colspan=2 align=center>Hãy gửi bài hát này cho người thân của bạn !
+			<div class="border" style="padding:1;margin:5" align=center><input type="text" onFocus="this.select()" value="{MEDIA_LINK}" style="width:100%;text-align:center;border:0"></div>
+	</td></tr>
+<tr><td class=fr colspan=3 align=center><a href=# onclick='addToPlaylist({song.ID});return false;'><img src='{TPL_LINK}/img/media/add.gif'> <b>Thêm vào Playlist</b></a> | <a href=# onclick='alertBrokenLink({song.ID});return false;'><img src='{TPL_LINK}/img/media/broken.gif'> <b>Lỗi</b></a> | <a title="Nhấn chuột phải, chọn Save Target As..." onclick='return false;' href="{DOWNLOAD_LINK}"><img src="{TPL_LINK}/img/media/download.gif"> <b>Download</b></a><br><a onclick='gift({song.ID},450,280);return false;' href="#Gift"><img src="{TPL_LINK}/img/media/gift.gif"> <b>Tặng nhạc</b></a> | <a onClick="return showComment({song.ID});" href="#Comment"><img src="{TPL_LINK}/img/media/comment.gif"> <b>Cảm nhận</b> ({comment.TOTAL})</a></td></tr>
+</tr>
+<tr><td colspan=3><div style="width:100%;display:none" align=center id="comment_field"></div></td></tr>
+</table>

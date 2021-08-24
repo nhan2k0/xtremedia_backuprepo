@@ -1,0 +1,18 @@
+<table width=100% cellpadding=2 cellspacing=2 class=border>
+	<tr><td class=title_r align=center>:: Playlist ::</td></tr>
+	<tr><td align="center"><a href="#Play_Playlist"><b>.: Nghe Playlist :.</b></a></td></tr>
+	<!-- BEGIN user_block -->
+	<tr><td>
+		<div id=playlist_field>
+		<!-- BEGIN playlist -->
+		<!-- #BEGIN playlist.row -->
+		<div style="background-color:#FBFBFB;border-bottom: 2px solid #FFF"><img style="CURSOR: pointer" src={TPL_LINK}/img/media/delete.gif onClick="removeFromPlaylist({song.ID})"><a href={song.URL}>{song.TITLE}</a></div>
+		<!-- #END playlist.row -->
+		<!-- END playlist -->
+		</div>
+	</td></tr>
+	<!-- END user_block -->
+	<!-- BEGIN guest_block -->
+	<tr><td>Bạn cần đăng nhập</td></tr>
+	<!-- END guest_block -->
+</table>

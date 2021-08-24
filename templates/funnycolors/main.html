@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+	<title>.: {WEB_TITLE} :.</title>
+	<meta http-equiv="imagetoolbar" content="no">
+	<link rel=stylesheet href='{TPL_LINK}/style.css' type=text/css>
+</head>
+<script>
+function SoH_Media(obj,is_close) {
+	var hideshow = document.getElementById(obj);
+	if (is_close) {
+		//hideshow.innerHTML = '';
+		//hideshow.style.display = "none";
+		document.getElementById('playing_field').innerHTML = '';
+		//document.getElementById("show_hide").style.display = "none";
+	}
+	else {
+		if(hideshow.style.display != "none") {
+			hideshow.style.display = "none";
+			document.getElementById("SoH").innerHTML = '[+] Hiện mục nghe nhạc';
+		}
+		else {
+			hideshow.style.display = "block";
+			document.getElementById("SoH").innerHTML = '[-] Dấu mục nghe nhạc';
+		}
+	}
+	return false;
+}
+
+var loadingText = "<center><img src='{TPL_LINK}/img/loading.gif'> <b>Đang tải dữ liệu ...</b></center>";
+</script>
+<!-- BEGIN js --><!-- END js -->
+<body>
+<div align=center style="width:100%"><div style='width:770'>
+<table width=100% cellpadding=0 cellspacing=0 class=topborder>
+	<tr><td align="center" style="background-image:url({TPL_LINK}/img/banner.gif);background-position:center;height:70px"></td></tr>
+	<tr><td style='padding:5;border-bottom: #E9E9E9 2px solid'>
+			<div style="padding-top:4">
+			<form id=search onSubmit="return do_search();">
+			Tìm kiếm <input type=text id=keyword value="Gõ không dấu" onFocus="this.value=''" size=30>
+			<select id="searchType">
+				<option value="song" selected>Bài hát</option>
+				<option value="singer">Ca sỹ</option>
+				<option value="album">Album</option>
+			</select>
+			<input type=submit class=submit value="Tìm">
+			</form>
+			</div>
+			<div style="padding-top:4">
+			Tìm theo bài hát : 
+			<a href="#Quick_Search,1,A"><b>A</b></a> <a href="#Quick_Search,1,B"><b>B</b></a> 
+			<a href="#Quick_Search,1,C"><b>C</b></a> <a href="#Quick_Search,1,D"><b>D</b></a> 
+			<a href="#Quick_Search,1,Đ"><b>Đ</b></a> <a href="#Quick_Search,1,E"><b>E</b></a> 
+			<a href="#Quick_Search,1,F"><b>F</b></a> <a href="#Quick_Search,1,G"><b>G</b></a> 
+			<a href="#Quick_Search,1,H"><b>H</b></a> <a href="#Quick_Search,1,I"><b>I</b></a> 
+			<a href="#Quick_Search,1,J"><b>J</b></a> <a href="#Quick_Search,1,K"><b>K</b></a> 
+			<a href="#Quick_Search,1,L"><b>L</b></a> <a href="#Quick_Search,1,M"><b>M</b></a> 
+			<a href="#Quick_Search,1,N"><b>N</b></a> <a href="#Quick_Search,1,O"><b>O</b></a> 
+			<a href="#Quick_Search,1,P"><b>P</b></a> <a href="#Quick_Search,1,Q"><b>Q</b></a> 
+			<a href="#Quick_Search,1,R"><b>R</b></a> <a href="#Quick_Search,1,S"><b>S</b></a> 
+			<a href="#Quick_Search,1,T"><b>T</b></a> <a href="#Quick_Search,1,U"><b>U</b></a> 
+			<a href="#Quick_Search,1,Ư"><b>Ư</b></a> <a href="#Quick_Search,1,V"><b>V</b></a> 
+			<a href="#Quick_Search,1,W"><b>W</b></a> <a href="#Quick_Search,1,X"><b>X</b></a> 
+			<a href="#Quick_Search,1,Y"><b>Y</b></a> <a href="#Quick_Search,1,Z"><b>Z</b></a> 
+			<a href="#Quick_Search,1,0-9"><b>0 - 9</b></a>
+			</div>
+	</td></tr>
+	<tr>
+		<td valign=top style="padding-top:5;">
+			<table cellpadding=2 cellspacing=0 width=100% align=center>
+				<tr>
+				<td width=20% valign=top align=center>
+					<table cellpadding=1 cellspacing=0 width=100% align=center>
+						<tr><td><!-- BOX box_main_menu() --></td></tr>
+						<tr><td style="padding-top:10"><!-- BOX box_user_menu() --></td></tr>
+						<tr><td style="padding-top:10"><!-- BOX box_gift() --></td></tr>
+						<tr><td style="padding-top:10"><!-- BOX box_category_menu() --></td></tr>
+						<tr><td style="padding-top:10"><!-- BOX box_album('New') --></td></tr>
+						<tr><td style='padding-top:10'><!-- BOX box_stats() --></td></tr>
+						<tr><td style='padding-top:10'><!-- BOX box_tpl_list() --></td></tr>
+					</table>
+				</td>
+				<td valign=top width=60% align=center>
+					<table width="100%" cellpadding=2 cellspacing=0 style="margin-bottom:5"><tr>
+						<td width=50% valign=top><!-- BOX box_top_media('Play') --></td>
+						<td valign=top><!-- BOX box_top_media('Download') --></td>
+					</tr></table>
+					<!-- BOX box_announcement() -->
+					<div id='playing_field' style='dislay:none;width:100%;'></div>
+					<div class=fr id='show_hide' style='display:none;margin-bottom:5' align=center><span><a href="#" id='SoH' onClick="return SoH_Media('playing_field',0);">[-] Dấu mục nghe nhạc</a></span> || <span><a href=# onClick="return SoH_Media('playing_field',1);">[x] Tắt mục nghe nhạc</a></span></div>
+					<div id='loading' style='display:none;margin-bottom:5'></div>
+					<div id='data_field' style='dislay:none;width:100%'></div>
+					<script>startLoad();</script>
+				</td>
+				<td valign=top width=20% align=center>
+					<table width=100% cellpadding=0 cellspacing=0 align=center>
+						<tr><td><!-- BOX box_playlist() --></td></tr>
+						<tr><td style="padding-top:10"><!-- BOX box_singer_list(1) --></td></tr>
+						<tr><td style="padding-top:10"><!-- BOX box_singer_list(2) --></td></tr>
+						<tr><td style='padding-top:10'><!-- BOX box_ads() --></td></tr>
+					</table>
+				</td>
+			</table>
+		</td>
+	</tr>
+	<tr><td width="98%"><!-- BOX box_user_online() --></td></tr>
+	<tr>
+		<td width="100%">
+			<table class=footer width="100%" cellpadding=4 cellspacing=0>
+				<tr><td align="center"><b>.: {WEB_TITLE} :.</b><br>
+				Powered by <a href=ymsgr:sendIM?xtremedia.source><b>XtreMedia 1.1</b></a> -  <a href=ymsgr:sendIM?redphoenix89><b>RedPhoenix89</b></a></td></tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</div></div>
+</body>
+</html>

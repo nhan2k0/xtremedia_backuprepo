@@ -9,7 +9,7 @@ git clone https://github.com/nhan2k0/xtremedia1.2
 ## Note
 This repo is in Vietnamese, so go ahead for grab Google Translate
 
-This is the modified source code from original source code, with some intergrated hence why the branch named unofficial, the original source code is in the search due to the site where provided the original one gone, meanwhile i can only provide this one, in case the original found, another branch will be release
+This branch is comes with sql files, which can be import in phpmyadmin, the original source code is in the search due to the site where provided the original one gone, meanwhile i can only provide this one, in case the original found, another branch will be release
 
 I do not code anything from this repo, this repo is like a backup repo, as there's no repo about this, i will not receive pull request and issue but appreciate to fork 
 

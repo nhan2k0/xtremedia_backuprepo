@@ -9,6 +9,14 @@ git clone https://github.com/nhan2k0/xtremedia1.2.git --branch 1.2
 --1.2mod branch
 git clone https://github.com/nhan2k0/xtremedia1.2.git --branch 1.2mod
 ```
+## Installation
+*Tested on XAMPP 1.6.5 (PHP 5.2.5, MySQL 5.0.51, phpMyAdmin 2.11.3)*
+- Create new database
+- Import `data.sql`
+- Configure database in `includes/config.php` for correct database username, db name
+
+In case, the page report with template error, move all the files from `templates/funnycolors` to `templates` folder or messing around skin configuration at admin page
+
 ## Note
 This repo is in Vietnamese, so go ahead for grab Google Translate
 
@@ -22,11 +30,4 @@ Please test it at your own risk (recommended localhost), as the code is outdated
 
 As always credit to RedPhoenix89 for making this
 
-## Installation
-*Tested on XAMPP 1.6.5 (PHP 5.2.5, MySQL 5.0.51, phpMyAdmin 2.11.3)*
-- Create new database
-- Import `data.sql`
-- Configure database in `includes/config.php` for correct database username, db name, host
-
-In case, the page report with template error, move all the files from `templates/funnycolors` to `templates` folder or messing around skin configuration at admin page
 

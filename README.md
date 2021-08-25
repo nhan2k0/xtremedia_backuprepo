@@ -3,11 +3,11 @@ Xtremedia is the Vietnamese open-source music hosting written by RedPhoenix89
 ![image](https://user-images.githubusercontent.com/42825138/130751507-8c529cec-40db-4949-8626-346cd0c51b0a.png)
 ## Clone the repository
 ```
---unofficial branch
-git clone https://github.com/nhan2k0/xtremedia1.2.git --branch unofficial
+--1.2 branch
+git clone https://github.com/nhan2k0/xtremedia1.2.git --branch 1.2
 
---1.2sql branch
-git clone https://github.com/nhan2k0/xtremedia1.2.git --branch 1.2sql
+--1.2mod branch
+git clone https://github.com/nhan2k0/xtremedia1.2.git --branch 1.2mod
 ```
 ## Note
 This repo is in Vietnamese, so go ahead for grab Google Translate

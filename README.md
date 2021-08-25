@@ -12,7 +12,7 @@ git clone https://github.com/nhan2k0/xtremedia1.2.git --branch 1.2mod
 ## Note
 This repo is in Vietnamese, so go ahead for grab Google Translate
 
-This is the modified source code from 1.2 with some changes, the image will not look the same this one provided
+This is the modified source code from 1.2 with some changes, the preview will not look the same this one provided
 
 I do not code anything from this repo, this repo is like a backup repo, as there's no repo about this, i will not receive pull request and issue but appreciate to fork 
 

@@ -4,10 +4,10 @@ Xtremedia is the Vietnamese open-source music hosting written by RedPhoenix89
 ## Clone the repository
 ```
 --1.1 branch
-git clone https://github.com/nhan2k0/xtremedia1.2.git --branch 1.1
+git clone https://github.com/nhan2k0/xtremedia_backuprepo.git --branch 1.1
 
 --1.2mod branch
-git clone https://github.com/nhan2k0/xtremedia1.2.git --branch 1.2mod
+git clone https://github.com/nhan2k0/xtremedia_backuprepo.git --branch 1.2
 ```
 ## Installation
 *Tested on XAMPP 1.6.5 (PHP 5.2.5, MySQL 5.0.51, phpMyAdmin 2.11.3)*

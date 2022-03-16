@@ -29,7 +29,7 @@ Due to the extremely outdated code, Windows Media Plugin will not functioning in
 Please test it at your own risk (recommended localhost), as the code is outdated, many security vulnerable will be occurred
 
 As always credit to RedPhoenix89 for making this
-In case the original owner request to remove this repository, i'm willing to do
+If the original author request to remove this repository, i'm willing to do
 
 ## Known Issues
 
